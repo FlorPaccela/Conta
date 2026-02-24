@@ -1068,7 +1068,7 @@ ul li::before {
 .hero-banner-content {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: center;
   align-items: center;
   gap: 40px;
