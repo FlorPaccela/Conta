@@ -1,0 +1,159 @@
+.plans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    @include media (tablet) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+    }
+
+    &-card-primary {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 16px 24px;
+        gap: 24px;
+        border-radius: 12px;
+        border: 1px solid rgba(204, 204, 204, 0.50);
+        background: var(--card, #FFF);
+        box-shadow: -2px 4px 4px rgba(132, 132, 132, 0.25);
+
+        h3 {
+            font-family: $font-title;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+    }
+
+    &-card-secondary {
+        width: 100%;
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 24px;
+        gap: 24px;
+        border-radius: 12px;
+        border: 1px solid #874FFF;
+        background: var(--card, #FFF);
+        box-shadow: -2px 4px 4px #874fff3b;
+
+        h3 {
+            font-family: $font-title;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+    }
+
+    &-card-tertiary {
+        min-height: none;
+        width: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 16px 24px;
+        gap: 24px;
+        border-radius: 12px;
+        border: 1px solid rgba(204, 204, 204, 0.50);
+        background: var(--card, #FFF);
+        box-shadow: -2px 4px 4px rgba(132, 132, 132, 0.25);
+
+        @include media (tablet) {
+            min-height: 560px;
+            justify-content: space-around;
+        }
+
+        h3 {
+            font-family: $font-title;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        &-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 24px;
+        }
+
+
+    }
+
+    .price {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 8px;
+
+        &-amount {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: end;
+            gap: 2px;
+
+            &-number {
+                font-family: $font-title;
+                font-weight: 600;
+                font-size: 40px;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .body-small {
+        font-family: $font-body;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+        color: $color-brand-primary;
+    }
+
+    .plan-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: start;
+        gap: 4px;
+
+        p {
+            font-family: $font-body;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            color: $color-subtext;
+        }
+    }
+
+    .salient {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 24px;
+        border-radius: 50px;
+        background: #874FFF;
+
+        p {
+            font-family: $font-body;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 20px;
+            color: #ffffff;
+        }
+    }
+}

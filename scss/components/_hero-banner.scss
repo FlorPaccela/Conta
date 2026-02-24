@@ -1,0 +1,103 @@
+.section-hero-banner {
+    width: 100%;
+    padding: 24px;
+
+    @include media (tablet) {
+        width: 100%;
+        padding: 48px;
+    }
+}
+
+
+.hero-banner {
+    width: 100%;
+    min-height: 545px;
+    padding: 40px 24px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8A38F5, #6DF3C8);
+    backdrop-filter: blur(5px);
+    border-radius: 48px;
+
+    @include media (tablet) {
+        padding: 24px;
+        min-height: none;
+        height: 545px;
+        background: #8A38F5;
+        background: linear-gradient(135deg, #8A38F5, #6DF3C8);
+        backdrop-filter: blur(5px);
+    }
+
+    &-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        @include media (tablet) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+
+            @include media (tablet) {
+                min-width: 200px;
+                max-width: 550px;
+                height: auto;
+            }
+
+        }
+
+        .hero-banner-text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            gap: 20px;
+            align-items: center;
+
+            @include media (tablet) {
+                width: 100%;
+                min-width: 430px;
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                gap: 20px;
+                align-items: center;
+            }
+        }
+    }
+
+
+
+    &-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        gap: 20px;
+        align-items: center;
+
+    }
+}
+
+.hero-cta {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 16px;
+
+}
