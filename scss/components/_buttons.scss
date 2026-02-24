@@ -62,3 +62,11 @@ a {
         }
     }
 }
+
+#cta-secondary {
+    display: none;
+
+    @include media (tablet) {
+        display: block;
+    }
+}
