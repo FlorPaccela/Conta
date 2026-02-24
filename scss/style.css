@@ -800,6 +800,9 @@ a {
 .button-white {
   color: #874FFF;
   background-color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  box-shadow: #6d3fd0 -2px 4px 12px;
 }
 .button-white:hover {
   text-decoration: none;
@@ -1112,10 +1115,23 @@ ul li::before {
 .hero-cta {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: start;
-  align-items: start;
+  align-items: center;
   gap: 16px;
+}
+.hero-cta a {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .hero-cta {
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+  }
+  .hero-cta a {
+    width: auto;
+  }
 }
 
 .footer-container {
