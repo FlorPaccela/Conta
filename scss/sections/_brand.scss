@@ -1,0 +1,53 @@
+.brand {
+    background-color: #dfdfdf34;
+
+    h2 {
+        color: $color-brand-primary;
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 48px;
+
+        a {
+            width: 100%;
+
+            @include media (tablet) {
+                width: 500px;
+            }
+
+        }
+    }
+}
+
+.brand-carrousel {
+    width: 100%;
+    overflow: hidden;
+
+    &-track {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        width: max-content;
+        animation: scroll 20s linear infinite;
+
+        img {
+            height: 30px;
+            width: auto;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-60%);
+    }
+}

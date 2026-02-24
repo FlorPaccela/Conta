@@ -1,0 +1,63 @@
+.faq {
+    background-color: #dfdfdf34;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+
+        a {
+            width: 100%;
+
+            @include media (tablet) {
+                width: 500px;
+            }
+
+        }
+    }
+
+    &-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.50);
+        padding: 16px 0;
+
+        summary {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            list-style: none;
+            font-family: $font-title;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 24px;
+            color: $color-text;
+
+            &::-webkit-details-marker {
+                display: none;
+            }
+
+            &::after {
+                content: "+";
+                font-size: 24px;
+                font-weight: 300;
+                transition: transform 0.3s ease;
+            }
+        }
+
+        &[open] summary::after {
+            content: "−";
+        }
+
+        p {
+            padding-top: 12px;
+            font-family: $font-body;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 26px;
+            color: $color-subtext;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style-position: inside;
+    list-style: none;
+
+    li {
+        font-size: 16px;
+        font-weight: 200;
+        color: $color-text;
+
+        &::before {
+            margin-right: 8px;
+            vertical-align: middle;
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url(../../assets/icons/listStyle.webp);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.checklist {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+}

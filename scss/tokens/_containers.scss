@@ -1,0 +1,141 @@
+// CONTAINERS //
+
+$container-xs: 356px;
+$container-small: 540px;
+$container-medium: 728px;
+$container-large: 952px;
+$container-xl: 1140px;
+$container-xxl: 1440px;
+
+@mixin container ($container-size) {
+    max-width: $container-size;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container {
+    &-xs {
+        @include container($container-xs);
+
+        @include media (tablet) {
+            @include container($container-xs);
+        }
+    }
+
+    &-small {
+        @include container($container-small);
+
+        @include media (tablet) {
+            @include container($container-small);
+        }
+    }
+
+    &-medium {
+        @include container($container-small);
+
+        @include media (tablet) {
+            @include container($container-medium);
+        }
+    }
+
+    &-large {
+        @include container($container-small);
+
+        @include media (tablet) {
+            @include container($container-large);
+        }
+    }
+
+    &-xl {
+        @include container($container-small);
+
+        @include media (tablet) {
+            @include container($container-xl);
+        }
+    }
+
+    &-xxl {
+        @include container($container-small);
+
+        @include media (tablet) {
+            @include container($container-xxl);
+        }
+    }
+
+    &-custom {
+        max-width: $container-small;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+// SECTIONS //
+
+// TIENE QUE TENER PADDING TOP Y BOTTOM, Y PADDING RICHT Y LEFT
+
+@mixin section ($spacing-top, $spacing-bottom) {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    padding-top: $spacing-top;
+    padding-bottom: $spacing-bottom;
+    padding-left: $spacing-600;
+    padding-right: $spacing-600;
+}
+
+
+
+.section {
+    &-xs {
+        @include section($spacing-100, $spacing-100);
+
+        @include media (tablet) {
+            @include section($spacing-100, $spacing-100);
+        }
+    }
+
+    &-small {
+        @include section($spacing-400, $spacing-400);
+
+        @include media (tablet) {
+            @include section($spacing-400, $spacing-400);
+        }
+    }
+
+    &-medium {
+        @include section($spacing-800, $spacing-800);
+
+        @include media (tablet) {
+            @include section($spacing-800, $spacing-800);
+        }
+    }
+
+    &-large {
+        @include section($spacing-1200, $spacing-1200);
+
+        @include media (tablet) {
+            @include section($spacing-1200, $spacing-1200);
+        }
+    }
+
+    &-xl {
+        @include section($spacing-1800, $spacing-1800);
+
+        @include media (tablet) {
+            @include section($spacing-1800, $spacing-1800);
+        }
+    }
+
+    &-xxl {
+        @include section($spacing-2000, $spacing-2000);
+
+        @include media (tablet) {
+            @include section($spacing-2000, $spacing-2000);
+        }
+    }
+
+    &-custom {
+        padding: $spacing-600 $spacing-400;
+    }
+}

@@ -1,0 +1,54 @@
+.information {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+
+    @include media (tablet) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &-card {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 24px;
+        gap: 24px;
+        border-radius: 12px;
+        border: 1px solid rgba(204, 204, 204, 0.50);
+        background: var(--card, #FFF);
+        box-shadow: -2px 4px 4px rgba(132, 132, 132, 0.25);
+
+        h3 {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $color-text;
+        }
+
+        &-heading {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            gap: 12px;
+
+            li {
+                display: flex;
+                align-items: baseline;
+                gap: 0px;
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 22px;
+                color: $color-subtext;
+
+                &::before {
+                    content: "•";
+                    margin-right: -4px;
+                }
+            }
+        }
+    }
+}
