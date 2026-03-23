@@ -37,3 +37,41 @@ stepItems.forEach(item => {
         if (targetImg) targetImg.classList.add('active');
     });
 });
+
+// ===================== MODAL DEMO =====================
+const demoModal = document.getElementById('demoModal');
+
+function openDemoModal(event) {
+    if (event) event.preventDefault();
+    demoModal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+        const input = document.getElementById('demoEmail');
+        if (input) input.focus();
+    }, 100);
+}
+
+function closeDemoModal() {
+    demoModal.classList.remove('is-open');
+    document.body.style.overflow = '';
+}
+
+// Cerrar al hacer click fuera del card
+demoModal.addEventListener('click', function (e) {
+    if (e.target === demoModal) closeDemoModal();
+});
+
+// Cerrar con tecla Escape
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && demoModal.classList.contains('is-open')) {
+        closeDemoModal();
+    }
+});
+
+function handleDemoSubmit(event) {
+    event.preventDefault();
+    const email = document.getElementById('demoEmail').value;
+    // Acá podés conectar con tu backend o redirigir
+    window.location.href = '/contacto/?email=' + encodeURIComponent(email);
+}
+// ======================================================

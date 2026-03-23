@@ -34,7 +34,8 @@
                     <li class="menu-item"><a href="#plans">Precios</a></li>
                     <li class="menu-item"><a href="#faq">FAQ</a></li>
                 </ul>
-                <a class="button button-primary button-small" href="#">Probar Demo Gratis</a>
+                <a class="button button-primary button-small" href="#" onclick="openDemoModal(event)">Probar Demo
+                    Gratis</a>
 
             </div>
             <a id="serviceMobile" href="" class="menu-icon">
@@ -50,7 +51,8 @@
                     <li class="menu-item"><a href="#plans">Precios</a></li>
                     <li class="menu-item"><a href="#faq">FAQ</a></li>
                 </ul>
-                <a class="button button-primary button-small" href="/contacto/">Probar Demo Gratis</a>
+                <a class="button button-primary button-small" href="#" onclick="openDemoModal(event)">Probar Demo
+                    Gratis</a>
             </div>
         </div>
     </nav>
@@ -64,8 +66,8 @@
                         cada movimiento por
                         terminal y cerrá el día sin dudas.</p>
                     <div class="hero-cta">
-                        <a class="button button-white button-icon button-large" href="#/">Probar Demo
-                            Gratis</a>
+                        <a class="button button-white button-icon button-large" href="#"
+                            onclick="openDemoModal(event)">Probar Demo Gratis</a>
                         <a id="cta-secondary" class="button button-secondary button-icon button-large" href="#">Ver cómo
                             funciona</a>
                     </div>
@@ -278,7 +280,7 @@
                     <img src="assets/brands/uala.png" alt="logo de Ualá">
                 </div>
             </div>
-            <a class="button button-primary button-small" href="/contacto/">Probar Demo Gratis</a>
+            <a class="button button-primary button-small" href="#" onclick="openDemoModal(event)">Probar Demo Gratis</a>
         </div>
 
     </section>
@@ -305,7 +307,7 @@
             </div>
             <div class="benefits-card">
                 <img width="56" height="56" src="assets/icon-note.svg" alt="icono de nota">
-                <h3>Registro claro de deudoresas</h3>
+                <h3>Registro claro de deudores</h3>
                 <p>Seguimiento de cuentas corrientes.</p>
             </div>
             <div class="benefits-card">
@@ -449,7 +451,8 @@
                 </div>
 
 
-                <a class="button button-outline button-small" href="/contacto/">Probar Demo Gratis</a>
+                <a class="button button-outline button-small" href="#" onclick="openDemoModal(event)">Probar Demo
+                    Gratis</a>
 
             </div>
 
@@ -500,7 +503,8 @@
                 </div>
 
 
-                <a class="button button-primary button-small" href="/contacto/">Probar Demo Gratis</a>
+                <a class="button button-primary button-small" href="#" onclick="openDemoModal(event)">Probar Demo
+                    Gratis</a>
 
             </div>
 
@@ -545,7 +549,8 @@
                     </div>
                 </div>
 
-                <a class="button button-outline button-small" href="/contacto/">Probar Demo Gratis</a>
+                <a class="button button-outline button-small" href="#" onclick="openDemoModal(event)">Probar Demo
+                    Gratis</a>
 
             </div>
 
@@ -597,7 +602,7 @@
                 <p class="body-subtitle-large">Con CONTA, cada medio de pago tiene su lugar.</p>
             </div>
 
-            <a class="button button-primary button-small" href="/contacto/">Probar Demo Gratis</a>
+            <a class="button button-primary button-small" href="#" onclick="openDemoModal(event)">Probar Demo Gratis</a>
             <p class="body-subtitle">Sin tarjeta de crédito • Configuración en minutos • Soporte en español</p>
         </div>
 
@@ -647,6 +652,26 @@
 
     </footer>
 
+    <!-- MODAL DEMO -->
+    <div id="demoModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeDemoModal()" aria-label="Cerrar modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <h2 id="modalTitle" class="modal-title">Accedé a la demo de CONTA</h2>
+            <p class="modal-description">Ingresá tu email para acceder a la <strong>demo gratuita</strong> y ver cómo
+                organizar tus medios de pago en un solo lugar.</p>
+            <form id="demoForm" class="modal-form" onsubmit="handleDemoSubmit(event)">
+                <input id="demoEmail" class="modal-input" type="email" name="email" placeholder="tumail@mail.com"
+                    required autocomplete="email" />
+                <button type="submit" class="button button-primary modal-submit">Ingresar</button>
+            </form>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
