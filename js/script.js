@@ -3,7 +3,8 @@
 //MENU MOBILE
 const menuMobile = document.querySelector('.menu-options');
 
-serviceMobile.addEventListener('click', togglemenuMobile);
+const serviceMobile = document.getElementById('serviceMobile');
+if (serviceMobile) serviceMobile.addEventListener('click', togglemenuMobile);
 
 menuMobile.addEventListener('click', (event) => {
     event.stopPropagation();
@@ -68,10 +69,8 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-function handleDemoSubmit(event) {
-    event.preventDefault();
-    const email = document.getElementById('demoEmail').value;
-    // Acá podés conectar con tu backend o redirigir
-    window.location.href = '/contacto/?email=' + encodeURIComponent(email);
-}
+// Habilitar botón submit cuando hay email
+document.getElementById('demoEmail').addEventListener('input', function () {
+    document.getElementById('demoSubmit').disabled = this.value.trim() === '';
+});
 // ======================================================

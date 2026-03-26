@@ -68,8 +68,6 @@
                     <div class="hero-cta">
                         <a class="button button-white button-icon button-large" href="#"
                             onclick="openDemoModal(event)">Probar Demo Gratis</a>
-                        <a id="cta-secondary" class="button button-secondary button-icon button-large" href="#">Ver cómo
-                            funciona</a>
                     </div>
                 </div>
                 <img src="assets/hero-banner.webp" alt="dashboard y logos de terminales de pago alrededor">
@@ -665,10 +663,17 @@
             <h2 id="modalTitle" class="modal-title">Accedé a la demo de CONTA</h2>
             <p class="modal-description">Ingresá tu email para acceder a la <strong>demo gratuita</strong> y ver cómo
                 organizar tus medios de pago en un solo lugar.</p>
-            <form id="demoForm" class="modal-form" onsubmit="handleDemoSubmit(event)">
+            <form id="demoForm" class="modal-form" action="https://formsubmit.co/contagestioncontable@gmail.com"
+                method="POST">
+                <!-- Redirección después de enviar -->
+                <input type="hidden" name="_next" value="https://appconta.lovable.app/">
+                <!-- Desactivar captcha (opcional pero recomendado para mejor UX de redirección) -->
+                <input type="hidden" name="_captcha" value="false">
+
                 <input id="demoEmail" class="modal-input" type="email" name="email" placeholder="tumail@mail.com"
                     required autocomplete="email" />
-                <button type="submit" class="button button-primary modal-submit">Ingresar</button>
+                <button type="submit" id="demoSubmit" class="button button-primary modal-submit"
+                    disabled>Ingresar</button>
             </form>
         </div>
     </div>
